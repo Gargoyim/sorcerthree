@@ -1,4 +1,5 @@
 ECHO OFF
+ECHO %~dp0
 ECHO Current directory: %cd%
 ECHO Checking for all changes made through these updates so far...
 
