@@ -55,7 +55,7 @@ IF NOT EXIST "mods/create-stuff-additions1.18.2_v1.1.6.jar" (
 ::immersive-portals.jar
 IF NOT EXIST "mods/immersive-portals.jar" (
     ECHO Immersive Portals is not installed! Downloading...
-    ::powershell -Command "(New-Object Net.WebClient).DownloadFile('https://drive.google.com/uc?export=download&id=1Ob7kyF1VlNLSABpbvlsOHCl1AH3wMIAG', 'immersive.zip')"
+    powershell -Command "(New-Object Net.WebClient).DownloadFile('https://drive.google.com/uc?export=download&id=1Ob7kyF1VlNLSABpbvlsOHCl1AH3wMIAG', 'immersive.zip')"
     powershell -Command "Expand-Archive -Path immersive.zip -DestinationPath %cd% -Force"
     move immersive/immersive-portals.jar mods
     move immersive/immersive_portals_fabric.json config
@@ -64,7 +64,7 @@ IF NOT EXIST "mods/immersive-portals.jar" (
 ::indium.jar
 IF NOT EXIST "mods/indium.jar" (
     ECHO Indium is not installed! Downloading...
-    ::powershell -Command "(New-Object Net.WebClient).DownloadFile('https://drive.google.com/uc?export=download&id=1wTjd1yQ0x1EfGR7CU-8PKyTV9JOE_Aa9', 'indium.zip')"
+    powershell -Command "(New-Object Net.WebClient).DownloadFile('https://drive.google.com/uc?export=download&id=1wTjd1yQ0x1EfGR7CU-8PKyTV9JOE_Aa9', 'indium.zip')"
     powershell -Command "Expand-Archive -Path indium.zip -DestinationPath %cd% -Force"
     move indium/indium.jar mods
     move indium/indium-renderer.properties config
@@ -73,7 +73,7 @@ IF NOT EXIST "mods/indium.jar" (
 ::Pehkui.jar
 IF NOT EXIST "mods/Pehkui.jar" (
     ECHO Pehkui is not installed! Downloading...
-    ::powershell -Command "(New-Object Net.WebClient).DownloadFile('https://drive.google.com/uc?export=download&id=1xyjAxj9SXtp9k_1qY49vq20zNgmR354t', 'pehkui.zip')"
+    powershell -Command "(New-Object Net.WebClient).DownloadFile('https://drive.google.com/uc?export=download&id=1xyjAxj9SXtp9k_1qY49vq20zNgmR354t', 'pehkui.zip')"
     powershell -Command "Expand-Archive -Path pehkui.zip -DestinationPath %cd% -Force"
     move pehkui/Pehkui.jar mods
     move pehkui/config.json config/pehkui
