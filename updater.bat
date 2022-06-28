@@ -1,4 +1,5 @@
 ECHO OFF
+ECHO Current directory: %cd%
 ECHO Checking for all changes made through these updates so far...
 
 ::IF NOT EXIST "unzip.exe" (
