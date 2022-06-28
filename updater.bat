@@ -25,7 +25,7 @@ IF NOT EXIST "mods/cc-restitched-1.100.8.jar" (
 ::chisel.jar
 IF NOT EXIST "mods/chisel.jar" (
     ECHO Chisel is not installed! Downloading...
-    powershell -Command "(New-Object Net.WebClient).DownloadFile('https://drive.google.com/uc?export=download&id=e3ZDKHtDx_NqYDmemB3hmmh8ljFj3', 'chisel.jar')"
+    powershell -Command "(New-Object Net.WebClient).DownloadFile('https://drive.google.com/uc?export=download&id=1WC-e3ZDKHtDx_NqYDmemB3hmmh8ljFj3', 'chisel.jar')"
     move chisel.jar mods
 )
 
