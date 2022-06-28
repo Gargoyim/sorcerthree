@@ -31,11 +31,11 @@ IF NOT EXIST "mods/chisel.jar" (
     move chisel.jar mods
 )
 
-::continuity-2.0.0+1.18.2.jar
-IF NOT EXIST "mods/continuity-2.0.0+1.18.2.jar" (
+::continuity.jar
+IF NOT EXIST "mods/continuity.jar" (
     ECHO Continuity is not installed! Downloading...
-    powershell -Command "(New-Object Net.WebClient).DownloadFile('https://drive.google.com/uc?export=download&id=1pUtjHaKq5Z6dY9L4s2gGXd3l9og0RHAT', 'continuity-2.0.0+1.18.2.jar')"
-    move continuity-2.0.0+1.18.2.jar mods
+    powershell -Command "(New-Object Net.WebClient).DownloadFile('https://drive.google.com/uc?export=download&id=1pUtjHaKq5Z6dY9L4s2gGXd3l9og0RHAT', 'continuity.jar')"
+    move continuity.jar mods
 )
 
 ::createdeco-1.2.7a-fabric-1.18.2.jar
