@@ -7,7 +7,7 @@ IF NOT EXIST "unzip.exe" (
 )
 
 
-::LIST:
+::LIST
 ::bitsandchisels-2.6.13.jar
 IF NOT EXIST "mods/bitsandchisels-2.6.13.jar" (
     ECHO Bits and Chisels is not installed! Downloading...
@@ -22,11 +22,11 @@ IF NOT EXIST "mods/cc-restitched-1.100.8.jar" (
     move cc-restitched-1.100.8.jar mods
 )
 
-::chisel-1.4.5+1.18.x.jar
-IF NOT EXIST "mods/chisel-1.4.5+1.18.x.jar" (
+::chisel.jar
+IF NOT EXIST "mods/chisel.jar" (
     ECHO Chisel is not installed! Downloading...
-    powershell -Command "(New-Object Net.WebClient).DownloadFile('https://drive.google.com/uc?export=download&id=e3ZDKHtDx_NqYDmemB3hmmh8ljFj3', 'chisel-1.4.5+1.18.x.jar')"
-    move chisel-1.4.5+1.18.x.jar mods
+    powershell -Command "(New-Object Net.WebClient).DownloadFile('https://drive.google.com/uc?export=download&id=e3ZDKHtDx_NqYDmemB3hmmh8ljFj3', 'chisel.jar')"
+    move chisel.jar mods
 )
 
 ::continuity-2.0.0+1.18.2.jar
