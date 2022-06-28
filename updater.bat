@@ -73,7 +73,7 @@ IF NOT EXIST "mods/indium.jar" (
 )
 
 ::Pehkui.jar
-::IF NOT EXIST "mods/Pehkui.jar" (
+IF NOT EXIST "mods/Pehkui.jar" (
     ECHO Pehkui is not installed! Downloading...
     powershell -Command "(New-Object Net.WebClient).DownloadFile('https://drive.google.com/uc?export=download&id=1xyjAxj9SXtp9k_1qY49vq20zNgmR354t', 'pehkui.zip')"
     powershell -Command "Expand-Archive -Path pehkui.zip -DestinationPath %cd% -Force"
