@@ -52,22 +52,22 @@ IF NOT EXIST "mods/create-stuff-additions1.18.2_v1.1.6.jar" (
     move create-stuff-additions1.18.2_v1.1.6.jar mods
 )
 
-::immersive-portals-1.4.7-mc1.18.2-fabric.jar
-IF NOT EXIST "mods/immersive-portals-1.4.7-mc1.18.2-fabric.jar" (
+::immersive-portals.jar
+IF NOT EXIST "mods/immersive-portals.jar" (
     ECHO Immersive Portals is not installed! Downloading...
-    ::powershell -Command "(New-Object Net.WebClient).DownloadFile('https://drive.google.com/uc?export=download&id=1lCHR6qwNY2xGHohtDinjCHQuFdW5cu0s', 'immersive.zip')"
+    ::powershell -Command "(New-Object Net.WebClient).DownloadFile('https://drive.google.com/uc?export=download&id=1Ob7kyF1VlNLSABpbvlsOHCl1AH3wMIAG', 'immersive.zip')"
     powershell -Command "Expand-Archive -Path immersive.zip -DestinationPath %cd% -Force"
-    move immersive/immersive-portals-1.4.7-mc1.18.2-fabric.jar mods
-    move immersive_portals_fabric.json config
+    move immersive/immersive-portals.jar mods
+    move immersive/immersive_portals_fabric.json config
 )
 
-::indium-1.0.6+mc1.18.2.jar
+::indium.jar
 IF NOT EXIST "mods/indium.jar" (
     ECHO Indium is not installed! Downloading...
     ::powershell -Command "(New-Object Net.WebClient).DownloadFile('https://drive.google.com/uc?export=download&id=1wTjd1yQ0x1EfGR7CU-8PKyTV9JOE_Aa9', 'indium.zip')"
     powershell -Command "Expand-Archive -Path indium.zip -DestinationPath %cd% -Force"
     move indium/indium.jar mods
-    move indium-renderer.properties config
+    move indium/indium-renderer.properties config
 )
 
 ::Pehkui.jar
