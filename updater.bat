@@ -39,11 +39,11 @@ IF NOT EXIST "mods/continuity.jar" (
 )
 
 ::createdeco-1.2.7a-fabric-1.18.2.jar
-IF NOT EXIST "mods/createdeco-1.2.7a-fabric-1.18.2.jar" (
-    ECHO Create Deco is not installed! Downloading...
-    powershell -Command "(New-Object Net.WebClient).DownloadFile('https://drive.google.com/uc?export=download&id=1nheV2ochw3r8elINKCmaVE8L_O75bnoR', 'createdeco-1.2.7a-fabric-1.18.2.jar')"
-    move createdeco-1.2.7a-fabric-1.18.2.jar mods
-)
+::IF NOT EXIST "mods/createdeco-1.2.7a-fabric-1.18.2.jar" (
+::    ECHO Create Deco is not installed! Downloading...
+::    powershell -Command "(New-Object Net.WebClient).DownloadFile('https://drive.google.com/uc?export=download&id=1nheV2ochw3r8elINKCmaVE8L_O75bnoR', 'createdeco-1.2.7a-fabric-1.18.2.jar')"
+::    move createdeco-1.2.7a-fabric-1.18.2.jar mods
+::)
 
 ::create-stuff-additions1.18.2_v1.1.6.jar
 IF NOT EXIST "mods/create-stuff-additions1.18.2_v1.1.6.jar" (
