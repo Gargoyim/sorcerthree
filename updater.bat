@@ -56,7 +56,7 @@ IF NOT EXIST "mods/create-stuff-additions1.18.2_v1.1.6.jar" (
 IF NOT EXIST "mods/immersive-portals.jar" (
     ECHO Immersive Portals is not installed! Downloading...
     powershell -Command "(New-Object Net.WebClient).DownloadFile('https://drive.google.com/uc?export=download&id=1Ob7kyF1VlNLSABpbvlsOHCl1AH3wMIAG', 'immersive.zip')"
-    powershell -Command "Expand-Archive -Path immersive.zip -DestinationPath %cd% -Force"
+    powershell -Command "Expand-Archive -Path immersive.zip -DestinationPath '%cd%' -Force"
     move immersive-portals.jar mods
     move immersive_portals_fabric.json config
     del immersive.zip
@@ -66,7 +66,7 @@ IF NOT EXIST "mods/immersive-portals.jar" (
 IF NOT EXIST "mods/indium.jar" (
     ECHO Indium is not installed! Downloading...
     powershell -Command "(New-Object Net.WebClient).DownloadFile('https://drive.google.com/uc?export=download&id=1wTjd1yQ0x1EfGR7CU-8PKyTV9JOE_Aa9', 'indium.zip')"
-    powershell -Command "Expand-Archive -Path indium.zip -DestinationPath %cd% -Force"
+    powershell -Command "Expand-Archive -Path indium.zip -DestinationPath '%cd%' -Force"
     move indium.jar mods
     move indium-renderer.properties config
     del indium.zip
@@ -76,12 +76,12 @@ IF NOT EXIST "mods/indium.jar" (
 IF NOT EXIST "mods/Pehkui.jar" (
     ECHO Pehkui is not installed! Downloading...
     powershell -Command "(New-Object Net.WebClient).DownloadFile('https://drive.google.com/uc?export=download&id=1xyjAxj9SXtp9k_1qY49vq20zNgmR354t', 'pehkui.zip')"
-    powershell -Command "Expand-Archive -Path pehkui.zip -DestinationPath %cd% -Force"
+    powershell -Command "Expand-Archive -Path pehkui.zip -DestinationPath '%cd%' -Force"
     move Pehkui.jar mods
     mkdir %cd%\config\pehkui
     move config.json config\pehkui
     del pehkui.zip
-::)
+)
 
 ::sodium-fabric-mc1.18.2-0.4.1+build.15.jar
 IF NOT EXIST "mods/sodium-fabric-mc1.18.2-0.4.1+build.15.jar" (
