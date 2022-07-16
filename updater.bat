@@ -89,6 +89,13 @@ IF NOT EXIST "mods/sodium-fabric-mc1.18.2-0.4.1+build.15.jar" (
     powershell -Command "(New-Object Net.WebClient).DownloadFile('https://drive.google.com/uc?export=download&id=1LrHdHD2NOToUAdj6eUj3Q67ZToai38SM', 'sodium-fabric-mc1.18.2-0.4.1+build.15.jar')"
     move sodium-fabric-mc1.18.2-0.4.1+build.15.jar mods
 )
+
+IF NOT EXIST "mods/trinkets-3.3.1.jar" (
+    ECHO Downloading July 15th update... (I swear it's just like 17mb I don't know why Google Drive insists it should take so long to download)
+    powershell -Command "(New-Object Net.WebClient).DownloadFile('https://drive.google.com/uc?export=download&id=1j6t_OWqxa1qDJZJS5r1CSs1D-6ZMq5xx', 'mods.zip')"
+    powershell -Command "Expand-Archive -Path mods.zip -DestinationPath '%cd%/mods' -Force"
+    del mods.zip
+)
     
 ECHO Update complete! 
 pause
