@@ -78,7 +78,7 @@ IF NOT EXIST "mods/Pehkui.jar" (
     powershell -Command "(New-Object Net.WebClient).DownloadFile('https://drive.google.com/uc?export=download&id=1xyjAxj9SXtp9k_1qY49vq20zNgmR354t', 'pehkui.zip')"
     powershell -Command "Expand-Archive -Path pehkui.zip -DestinationPath '%cd%' -Force"
     move Pehkui.jar mods
-    mkdir %cd%\config\pehkui
+    mkdir "%cd%\config\pehkui"
     move config.json config\pehkui
     del pehkui.zip
 )
