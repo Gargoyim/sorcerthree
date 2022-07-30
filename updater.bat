@@ -97,6 +97,14 @@ IF NOT EXIST "mods/trinkets-3.3.1.jar" (
     powershell -Command "Expand-Archive -Path mods.zip -DestinationPath '%cd%/mods' -Force"
     del mods.zip
 )
-    
+
+::July 30th Update
+IF NOT EXIST "mods/Adorn-3.5.0.jar" (
+    ECHO Downloading July 30th update... (This one adds some funny little things like extra witch stuff and some furniture. It'll be pretty cool, bear with me!)
+    powershell -Command "(New-Object Net.WebClient).DownloadFile('https://drive.google.com/uc?export=download&id=1EbuMhJPqSWpYe5JdtWsQT9LFCrBCzDY3', 'mods2.zip')"
+    powershell -Command "Expand-Archive -Path mods2.zip -DestinationPath '%cd%/mods' -Force"
+    del mods2.zip
+)
+ 
 ECHO Update complete! 
 pause
