@@ -105,6 +105,18 @@ IF NOT EXIST "mods/Adorn-3.5.0.jar" (
     powershell -Command "Expand-Archive -Path mods2.zip -DestinationPath '%cd%/mods' -Force"
     del mods2.zip
 )
- 
+
+::August 16th Update
+IF NOT EXIST "mods/create-1.18.2-0.5.0c-708.jar" (
+    ECHO Downloading August 16th update... (This one just updates Create to the version that adds trains and steam engines. It also updates a separate mod that would otherwise crash, and throws in some compatibility stuff for ComputerCraft. But all any of us should really care about are the trains)
+    powershell -Command "(New-Object Net.WebClient).DownloadFile('https://drive.google.com/uc?export=download&id=1I7nQJv7Lec9rAFlQlA0osPGxl5EEaB_Q', 'mods3.zip')"
+    powershell -Command "Expand-Archive -Path mods3.zip -DestinationPath '%cd%/mods' -Force"
+    del mods3.zip
+    del "mods/create-mc1.18.2_v0.4.1+631.jar"
+    del "mods/createaddition-1.18.2-20220621a.jar"
+)
+
+
+
 ECHO Update complete! 
 pause
