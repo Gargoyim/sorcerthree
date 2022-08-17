@@ -1,6 +1,4 @@
 ECHO OFF
-ECHO %~dp0
-ECHO Current directory: %cd%
 ECHO Checking for all changes made through these updates so far...
 
 ::IF NOT EXIST "unzip.exe" (
@@ -92,7 +90,7 @@ IF NOT EXIST "mods/sodium-fabric-mc1.18.2-0.4.1+build.15.jar" (
 
 ::July 15th Update
 IF NOT EXIST "mods/trinkets-3.3.1.jar" (
-    ECHO Downloading July 15th update... (I swear it's just like 17mb I don't know why Google Drive insists it should take so long to download)
+    ECHO Downloading July 15th update... I swear it's just like 17mb I don't know why Google Drive insists it should take so long to download
     powershell -Command "(New-Object Net.WebClient).DownloadFile('https://drive.google.com/uc?export=download&id=1j6t_OWqxa1qDJZJS5r1CSs1D-6ZMq5xx', 'mods.zip')"
     powershell -Command "Expand-Archive -Path mods.zip -DestinationPath '%cd%/mods' -Force"
     del mods.zip
@@ -100,27 +98,22 @@ IF NOT EXIST "mods/trinkets-3.3.1.jar" (
 
 ::July 30th Update
 IF NOT EXIST "mods/Adorn-3.5.0.jar" (
-    ECHO Downloading July 30th update... (This one adds some funny little things like extra witch stuff and some furniture. It'll be pretty cool, bear with me!)
+    ECHO Downloading July 30th update... This one adds some funny little things like extra witch stuff and some furniture. It'll be pretty cool, bear with me!
     powershell -Command "(New-Object Net.WebClient).DownloadFile('https://drive.google.com/uc?export=download&id=1EbuMhJPqSWpYe5JdtWsQT9LFCrBCzDY3', 'mods2.zip')"
     powershell -Command "Expand-Archive -Path mods2.zip -DestinationPath '%cd%/mods' -Force"
     del mods2.zip
 )
 
 ::August 16th Update
-::IF NOT EXIST "mods/create-1.18.2-0.5.0c-708.jarris" (
+IF NOT EXIST "mods/create-1.18.2-0.5.0c-708.jar" (
     ECHO Downloading August 16th update... This one just updates Create to the version that adds trains and steam engines. It also updates a separate mod that would otherwise crash, and throws in some compatibility stuff for ComputerCraft. But all any of us should really care about are the trains
-    ::powershell -Command "(New-Object Net.WebClient).DownloadFile('https://drive.google.com/uc?export=download&id=1I7nQJv7Lec9rAFlQlA0osPGxl5EEaB_Q', 'mods3.zip')"
-    ::powershell -Command "Expand-Archive -Path mods3.zip -DestinationPath '%cd%/mods' -Force"
-    ECHO As-is...
-    del "mods/create-mc1.18.2_v0.4.1+631.jar"
-    del "mods/createaddition-1.18.2-20220621a.jar"
-    ECHO Without changing directory...
-    del create-mc1.18.2_v0.4.1+631.jar
-    del createaddition-1.18.2-20220621a.jar
-    ::del mods3.zip
-
-
-
+    powershell -Command "(New-Object Net.WebClient).DownloadFile('https://drive.google.com/uc?export=download&id=1I7nQJv7Lec9rAFlQlA0osPGxl5EEaB_Q', 'mods3.zip')"
+    powershell -Command "Expand-Archive -Path mods3.zip -DestinationPath '%cd%/mods' -Force"
+    ECHO Attempting to delete files...
+    del "mods\create-mc1.18.2_v0.4.1+631.jar"
+    del "mods\createaddition-1.18.2-20220621a.jar"
+    del mods3.zip
+)
 
 ECHO Update complete! 
 pause
