@@ -117,13 +117,13 @@ IF NOT EXIST "mods/create-1.18.2-0.5.0c-708.jar" (
 
 
 ::August 21st Update
-IF NOT EXIST "mods/createaddition+1.18.2-1.18.2-20220813a.jar" (
+IF NOT EXIST "mods/fabric-api-0.58.0+1.18.2.jar" (
     ECHO Downloading August 21st update... This just fixes an issue I caused with the previous update. No actual content or anything. Before launching, be sure to update your Fabric version from 0.14.8 to 0.14.9!
     powershell -Command "(New-Object Net.WebClient).DownloadFile('https://drive.google.com/uc?export=download&id=1fIvQKy-C5TwXx6Qbn4C4lGCNuhYBsu4K', 'mods4.zip')"
     powershell -Command "Expand-Archive -Path mods4.zip -DestinationPath '%cd%/mods' -Force"
     ECHO Attempting to delete files...
     del "mods\createaddition-1.18.2-20220813a.jar"
-    del "mods\fabric-api-0.58.0+1.18.2.jar"
+    del "mods\fabric-api-0.56.0+1.18.2.jar"
     del mods4.zip
 )
 
